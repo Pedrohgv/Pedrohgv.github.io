@@ -1,0 +1,75 @@
+<workflow_instructions>
+  <mode_overview>
+    This mode specializes in filling complex LaTeX resume templates with professional content based exclusively on user-provided information. It translates informal input into polished, resume-appropriate language.
+  </mode_overview>
+
+  <initialization_steps>
+    <step number="1">
+      <action>Identify User's Goal and Information Sources</action>
+      <details>
+        - Determine if the user wants to create a new resume, update a section, or refine existing content.
+        - Identify all sources of information: user's informal text, attached .txt files, or specific instructions.
+        - Locate the target LaTeX template file (`.tex`).
+      </details>
+    </step>
+    
+    <step number="2">
+      <action>Analyze the LaTeX Template Structure</action>
+      <tools>
+        <tool>read_file - To examine the `.tex` template.</tool>
+      </tools>
+      <details>
+        - Identify the different sections of the resume (e.g., `\section{Experience}`, `\section{Education}`).
+        - Understand the custom commands and environments used for entries (e.g., `\resumeSubheading`, `\resumeItemListStart`).
+      </details>
+    </step>
+  </initialization_steps>
+
+  <main_workflow>
+    <phase name="information_extraction">
+      <description>Extract and structure all information provided by the user.</description>
+      <steps>
+        <step>Read all user-provided text and files.</step>
+        <step>Organize the information into logical categories (Experience, Education, Skills, Projects, etc.).</step>
+        <step>
+          <action>Ask for clarification if information is ambiguous or incomplete for a required section.</action>
+          <example>
+            <ask_followup_question>
+              <question>I see you mentioned a project with "React and Node.js". Could you provide a bit more detail on what the project was about and what your role was?</question>
+              <follow_up>
+                <suggest>It was a full-stack web application for task management where I built the REST API and the front-end interface.</suggest>
+                <suggest>I was responsible for the back-end development, creating API endpoints for user authentication and data handling.</suggest>
+              </follow_up>
+            </ask_followup_question>
+          </example>
+        </step>
+      </steps>
+    </phase>
+
+    <phase name="content_generation_and_insertion">
+      <description>Translate the user's information into professional language and insert it into the LaTeX template.</description>
+      <steps>
+        <step>For each piece of user information, identify the corresponding section in the `.tex` file.</step>
+        <step>Rewrite the user's informal text using professional, action-oriented language suitable for a resume.</step>
+        <step>Format the professional text using the LaTeX template's specific commands and environments.</step>
+        <step>Use `apply_diff` to insert the newly generated LaTeX code into the correct location in the resume file.</step>
+      </steps>
+    </phase>
+
+    <phase name="validation">
+      <description>Verify the final output.</description>
+      <steps>
+        <step>Review the modified `.tex` file to ensure there are no syntax errors.</step>
+        <step>Confirm that all user-provided information has been included.</step>
+        <step>Ensure no outside information has been added.</step>
+      </steps>
+    </phase>
+  </main_workflow>
+
+  <completion_criteria>
+    <criterion>The LaTeX resume template is successfully filled with the user's information.</criterion>
+    <criterion>The language used is professional and accurately reflects the user's input.</criterion>
+    <criterion>The final `.tex` file is syntactically correct and ready for compilation.</criterion>
+    <criterion>No information has been invented or sourced from outside the user's provided context.</criterion>
+  </completion_criteria>
+</workflow_instructions>

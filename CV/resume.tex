@@ -1,0 +1,111 @@
+%-------------------------
+% Rover Resume - Base Template
+% Link: https://github.com/subidit/rover-resume
+%
+% Shows code for various formatting options for different resume sections.
+% Education and Projects have single-line headers; while Experience uses double-line.
+% Some formatting codes are kept inline; consider \newcommand{cmd}{def}.
+% Excludes hyperref and icons for readability; MVP version.
+% Explore other templates for more options.
+% Mix and match as desired. Be consistent with headers and sub-headers.
+%------------------------
+
+\documentclass[11pt]{article} % fontsize 10pt/11pt/12pt
+
+\usepackage[margin=1in, a4paper]{geometry}
+\setcounter{secnumdepth}{0} % remove section numbering
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{*0}{*0} % remove vertical spacing above and below
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titleformat*{\subsubsection}{\large\itshape}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,left=0pt .. \parindent}
+\pagestyle{empty} % remove page number
+\pdfgentounicode=1
+
+
+\begin{document}
+
+\begin{center}
+	\begin{minipage}{0.5\textwidth}
+		{\Huge\bfseries
+			PEDRO \\ VENTUROTT % Name Here
+		} \\ \medskip
+		Machine Learning Engineer % Title [optional]
+	\end{minipage} \hfill
+	\begin{minipage}{0.4\textwidth}
+		\raggedleft
+		Email: pedro.venturott@gmail.com \\
+		Mobile: +55 27 99992-6511 \\
+		Location: Brazil (UTC-03) \\
+		Portfolio: [portfolio-link] \\
+		GitHub: [github-link] \\
+		Medium: [medium-link] \\
+		LinkedIn: [linkedin-link]
+	\end{minipage}
+\end{center}
+
+\section{Summary}
+%=================%
+Self-taught Machine Learning Engineer. Self-driven and independent learner. Python lover and very interested in ML applied to the Tech Industry, especially Embedded Systems, Power Systems, Renewable Energy, NLP, and Computer Vision.
+
+\section{Experience}
+%=================%
+\subsection{ReflexAI \hfill Remote}
+\subsubsection{Machine Learning Engineer \hfill 03/2024 - Present}
+\begin{itemize}
+	\item Worked on simulation creation for various training scenarios.
+	\item Created tools and products to allow internal and external customers to create simulations on their own.
+\end{itemize}
+
+\subsection{Quilt.ai \hfill Remote}
+\subsubsection{Machine Learning Engineer \hfill 11/2021 - 03/2024}
+\begin{itemize}
+	\item Led development initiatives in machine learning, specializing in tasks such as clustering, classification, vector embeddings, and text/image generation using technologies like Numpy, Scikit-Learn, PyTorch, HuggingFace, ChatGPT, and Llama.
+	\item Drove MLOps strategies for seamless transition of ML solutions from development to production, optimizing models for efficiency and scalability. Employing tools such as Docker, Kubernetes, AWS Sagemaker, GCP Cloud Run, FastAPI, ONNX optimization, and model quantization to ensure robust and optimized deployment pipelines.
+\end{itemize}
+
+\subsection{Kerberos.io \hfill Remote}
+\subsubsection{Part-Time Machine Learning Engineer \hfill 06/2021 - 11/2021}
+\begin{itemize}
+	\item Integrated the surveillance solution at Kerberos.io with a computer vision pipeline for custom object detection, implementing the stages of data processing, training, and inference within the Kubeflow environment.
+\end{itemize}
+
+\subsection{Freelancing \hfill Remote}
+\subsubsection{Machine Learning Engineer \hfill 02/2021 - 06/2021}
+\begin{itemize}
+	\item Worked on ML projects based on different client requirements involving Data Preprocessing, Time-Series Prediction and Recurrent Neural Networks.
+\end{itemize}
+
+\section{Education}
+%=================%
+\subsection{Federal University of Espirito Santo, Brazil $|$ {\normalfont\itshape B.S. in Electrical Engineering} \hfill 08/2010 - 08/2017}
+
+\subsection{Stanford University on Coursera $|$ {\normalfont\itshape Machine Learning Course and Deep Learning Specialization} \hfill 01/2019 - 03/2019}
+
+\section{Skills \& Interests}
+%===========================%
+\begin{description}[itemsep=0pt]
+	\item[Technical] MLOps (SageMaker, Docker, Kubernetes, Kubeflow, Kafka, GCP, Prefect, Cloud Run, ONNX), Python (Numpy, Pandas, Scikit-Learn, StatsModels, LifeLines, sktime, Tensorflow, PyTorch, MatplotLib, Plotly, Flask, FastAPI), Machine Learning (Logistic/Linear Regression, SVM, RF, Naive Bayes, KNN, K-Means, Time-Series ML, Deep Learning, NLP, Computer Vision), Prompt Engineering (ChatGPT, Llama3), Data Processing and Cleaning, Auxiliary tools (Jira, Git)
+	\item[Language] English, Portuguese
+\end{description}
+
+\section{Projects}
+%=================
+\subsection{Vehicle Type Classification Using Simulated Trajectory Data $|$ \normalfont\textit{GitHub/Medium} \hfill}
+\begin{itemize}
+  \item Predicted type of vehicles based on simulated trajectory data with an achieved F1-Score of 0.87.
+\end{itemize}
+
+\subsection{Music Genre Classification Using Waveform Features $|$ \normalfont\textit{GitHub/Medium} \hfill}
+\begin{itemize}
+  \item Classified music into 10 different genres using features extracted from waveforms with an achieved accuracy of 68.5\%.
+\end{itemize}
+
+\subsection{Character-level Short Text Generator $|$ \normalfont\textit{GitHub/Medium} \hfill}
+\begin{itemize}
+  \item Scraped sentences from the Star Wars Wikipedia Website and developed a short text generator using Deep Learning.
+\end{itemize}
+
+\end{document}
