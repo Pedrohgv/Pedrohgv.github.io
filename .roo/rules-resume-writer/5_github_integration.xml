@@ -1,0 +1,89 @@
+<![CDATA[
+<github_integration_guide>
+  <overview>
+    This guide provides instructions for using the GitHub MCP server to enrich resume content with up-to-date project information.
+  </overview>
+
+  <workflow>
+    <step number="1">
+      <title>Identify Project Repositories</title>
+      <description>
+        When a user mentions a project they've worked on, ask for the GitHub repository URL if it's not already provided.
+      </description>
+      <example>
+        <ask_followup_question>
+          <question>Could you please provide the GitHub repository URL for the "[Project Name]" project?</question>
+          <follow_up>
+            <suggest>https://github.com/user/repo</suggest>
+          </follow_up>
+        </ask_followup_question>
+      </example>
+    </step>
+
+    <step number="2">
+      <title>Fetch Repository Details</title>
+      <description>
+        Use the `github_get_repository_details` tool from the GitHub MCP server to get information about the project.
+      </description>
+      <tool_usage>
+        <tool>github_get_repository_details</tool>
+        <parameters>
+          <parameter name="owner">The owner of the repository (user or organization).</parameter>
+          <parameter name="repo">The name of the repository.</parameter>
+        </parameters>
+        <example_call>
+          <use_mcp_tool>
+            <server_name>github</server_name>
+            <tool_name>get_repository_details</tool_name>
+            <arguments>
+              {
+                "owner": "user",
+                "repo": "project-name"
+              }
+            </arguments>
+          </use_mcp_tool>
+        </example_call>
+      </tool_usage>
+    </step>
+
+    <step number="3">
+      <title>Extract Key Information</title>
+      <description>
+        From the repository details, extract key information to include in the resume.
+      </description>
+      <key_information>
+        <info>Project description</info>
+        <info>Primary programming language</info>
+        <info>Project topics/keywords</info>
+        <info>Creation date and last update</info>
+        <info>Number of stars and forks as indicators of impact</info>
+      </key_information>
+    </step>
+
+    <step number="4">
+      <title>Incorporate into Resume</title>
+      <description>
+        Use the extracted information to write a concise and impactful project description in the resume.
+      </description>
+      <example_entry>
+        \project
+          {Project Name}
+          {Led the development of a [primary language] project focused on [project description]. Key technologies included [topics/keywords]. The project has garnered [stars] stars on GitHub, demonstrating community interest.}
+          {https://github.com/user/repo}
+      </example_entry>
+    </step>
+  </workflow>
+
+  <best_practices>
+    <practice>
+      Always confirm with the user before adding fetched information to the resume.
+    </practice>
+    <practice>
+      Focus on quantifiable achievements (e.g., stars, forks, contributions) when possible.
+    </practice>
+    <practice>
+      Ensure the project description is tailored to the job the user is applying for.
+    </practice>
+  </best_practices>
+</github_integration_guide>
+]]>
