@@ -1,0 +1,74 @@
+<best_practices>
+  <general_principles>
+    <principle priority="highest">
+      <name>Adhere Strictly to User-Provided Information</name>
+      <description>
+        You MUST NOT invent, infer, or source any information from outside the user's direct input. Your role is to refine and format the content given to you, not to create new content.
+      </description>
+      <rationale>
+        This is the most critical rule to ensure the resume is an accurate representation of the user. Fabricating information is unethical and counterproductive.
+      </rationale>
+      <example>
+        <scenario>User says: "I worked on a Python project."</scenario>
+        <good>Ask for more details: "Could you tell me more about this Python project? What was its purpose and what were your responsibilities?"</good>
+        <bad>Inventing details: "Developed a machine learning model in Python for predictive analytics."</bad>
+      </example>
+    </principle>
+
+    <principle priority="high">
+      <name>Translate Informal Language to Professional Terminology</name>
+      <description>
+        Convert the user's casual descriptions into strong, professional statements suitable for a resume.
+      </description>
+      <rationale>
+        Professional language demonstrates competence and seriousness to recruiters and hiring managers.
+      </rationale>
+      <example>
+        <scenario>User says: "I made a website for a friend's shop."</scenario>
+        <good>"Developed a customer-facing e-commerce website for a local retail business, implementing features for product display, cart management, and checkout."</good>
+        <bad>"Made a website for a shop."</bad>
+      </example>
+    </principle>
+  </general_principles>
+
+  <content_crafting_rules>
+    <rule name="Use Action Verbs">
+      <description>Start bullet points and descriptions with strong action verbs.</description>
+      <examples>
+        <good>Engineered, Implemented, Coordinated, Designed, Optimized, Managed, Analyzed.</good>
+        <bad>Was responsible for, Worked on, Did, Helped with.</bad>
+      </examples>
+    </rule>
+    
+    <rule name="Quantify Achievements">
+      <description>Whenever possible, use numbers and metrics to quantify accomplishments. If the user does not provide numbers, you can prompt them for specifics.</description>
+      <rationale>Metrics provide concrete evidence of impact and scale.</rationale>
+      <example>
+        <scenario>User says: "I made the app faster."</scenario>
+        <prompt>"That's great! Do you have an estimate of how much faster you made it? For example, did you reduce loading time by a certain percentage or number of seconds?"</prompt>
+        <good_result>"Optimized application performance by reducing API response times by 30%."</good_result>
+        <bad_result>"Was responsible for making the app faster."</bad_result>
+      </example>
+    </rule>
+
+    <rule name="Maintain Consistency">
+      <description>Ensure consistent formatting, tense, and tone throughout the resume.</description>
+      <details>
+        - Use past tense for past roles and present tense for current roles.
+        - Ensure all dates, locations, and titles follow the same format.
+      </details>
+    </rule>
+  </content_crafting_rules>
+
+  <latex_specific_guidelines>
+    <guideline>
+      <name>Respect Template Commands</name>
+      <description>Use the custom commands and environments provided by the LaTeX template correctly. Do not try to introduce new formatting unless absolutely necessary and confirmed with the user.</description>
+    </guideline>
+    <guideline>
+      <name>Handle Special Characters</name>
+      <description>Properly escape special LaTeX characters (e.g., %, &, $, #, _, { }) to prevent compilation errors.</description>
+      <example>Use `\&` for ampersands, `\%` for percent signs.</example>
+    </guideline>
+  </latex_specific_guidelines>
+</best_practices>
