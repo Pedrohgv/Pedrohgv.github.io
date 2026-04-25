@@ -85,6 +85,7 @@ Use these templates with the skills installed in `.opencode/skills`.
 - [ ] Run `resume-quantifier` for any missing measurable impact.
 - [ ] Run `resume-ats-optimizer` to validate keyword coverage.
 - [ ] Save variant details via `resume-version-manager` notes.
+- [ ] Add or update one row in `CV/application-tracker.md`.
 - [ ] Update `CV/resume.tex` only with truthful, validated claims.
 
 ## Notes on Lower-Priority Skills
