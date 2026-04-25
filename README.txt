@@ -3,6 +3,11 @@ Agent Documentation Map
 
 - `AGENTS.md`          - Repository-wide OpenCode agent guidance.
 - `CV/AGENTS.md`       - Resume/CV-specific OpenCode guidance for files inside `CV/`.
+- `.opencode/skills/`  - Auto-discovered OpenCode skills used for AI resume workflows.
+- `CV/AI_RESUME_WORKFLOW.md` - Continuous AI workflow for keeping `CV/resume.tex` current.
+- `CV/AI_RESUME_TEMPLATES.md` - Monthly and per-job templates/checklists.
+- `CV/application-tracker.md` - Persistent ledger for applications, resume variants, and status.
+- `CV/README.md` - Commands to build `CV/resume.pdf` from `CV/resume.tex`.
 
 Note: Legacy Roo configuration files are no longer used in this repository.
 

@@ -6,6 +6,9 @@ This file defines OpenCode-specific behavior for work inside `CV/`.
 
 - Applies to all files in `CV/` and subdirectories.
 - Primary targets are `CV/resume.tex` and related LaTeX assets.
+- Follow process guidance in `CV/AI_RESUME_WORKFLOW.md`.
+- Use templates/checklists from `CV/AI_RESUME_TEMPLATES.md`.
+- Prefer skills from `.opencode/skills/` for resume analysis and tailoring.
 
 ## Role
 
