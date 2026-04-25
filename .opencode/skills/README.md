@@ -37,5 +37,6 @@ This folder contains the curated resume skills installed for automatic OpenCode 
 ## Update Policy
 
 - Keep upstream skill names unchanged to preserve auto-detection behavior.
+- Treat `SOURCE_LOCK.md` as the source-of-truth for upstream revision pinning.
 - When updating skill content, record the source commit or date in the PR/commit message.
 - Prefer adding new skills only when they support the CV maintenance workflow in `CV/AI_RESUME_WORKFLOW.md`.

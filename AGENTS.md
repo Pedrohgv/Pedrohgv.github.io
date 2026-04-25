@@ -18,7 +18,7 @@
 ## Project Structure & Conventions
 
 - **Root Directory:** Contains the main [`index.html`](index.html), [`favicon.ico`](favicon.ico), and configuration files.
-- **`assets/` Directory:** Houses all static assets, including [`css/`](css/), [`js/`](js/), and [`images/`](images/).
+- **`assets/` Directory:** Houses all static assets, including [`assets/css/`](assets/css/), [`assets/js/`](assets/js/), and [`assets/images/`](assets/images/).
 - **`CV/` Directory:** Dedicated to resume and CV management. This folder contains `.tex` source files and compiled PDFs. The core file is [`resume.tex`](CV/resume.tex).
 - **Git Workflow:** Adhere to a clear commit message convention (e.g., Conventional Commits). The primary branch is `main`. All development should occur on feature branches and be merged via pull requests for significant changes.
 

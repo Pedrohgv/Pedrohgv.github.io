@@ -33,6 +33,7 @@ This workflow keeps `CV/resume.tex` updated continuously using OpenCode skills i
 - Source of truth: `CV/resume.tex`.
 - Optional generated artifact: `CV/resume.pdf`.
 - Skills location for auto-discovery: `.opencode/skills/`.
+- Skills upstream pinning: `.opencode/skills/SOURCE_LOCK.md`.
 - Execution notes and templates: `CV/AI_RESUME_TEMPLATES.md`.
 
 ## Quality Guardrails
