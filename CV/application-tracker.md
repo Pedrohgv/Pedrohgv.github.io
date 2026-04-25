@@ -16,6 +16,7 @@ Use this file as the single source of truth for custom resume variants and appli
 
 | Date | Company | Role | Job URL | Resume Variant | Base Version | Match Score | Status | Last Update | Notes |
 |---|---|---|---|---|---|---:|---|---|---|
+| 2026-04-25 | Telepatia | Senior AI Engineer | N/A (description provided directly) | `CV/versions/Venturott_AIEngineer_Telepatia_2026-04.pdf` | `CV/resume.tex` | 72 | draft | 2026-04-25 | Strong fit on agents/pipelines/FastAPI/MLOps; gaps to address in interviews: explicit million-user scale and direct RAG/knowledge-graph depth. |
 | YYYY-MM-DD |  |  |  |  | `CV/resume.tex` | 0 | draft | YYYY-MM-DD | |
 
 ## Variant Naming Convention
