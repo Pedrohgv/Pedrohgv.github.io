@@ -29,6 +29,13 @@
 - **CV Management Task:** The principal future objective is to implement a robust CV versioning system. This involves creating a GitHub Action workflow that automatically detects changes to `.tex` files within the `CV/` directory, compiles `resume.tex` into a `CV.pdf`, and commits the resulting PDF back to the repository.
 - **Autonomy:** You are expected to proactively suggest improvements for code structure, performance, user experience, and the implementation of the CV workflow. You can create new files, refactor existing code, and update documentation as needed, always providing a clear summary of your actions.
 
+## OpenCode Migration Notes
+
+- This repository now uses OpenCode-native agent guidance only.
+- Resume-specific agent behavior that previously lived in Roo mode/rules has been migrated to `CV/AGENTS.md`.
+- Legacy Roo configuration files (`.roomodes` and `.roo/`) are no longer used and should remain removed.
+- For GitHub repository enrichment tasks, prefer `gh` CLI commands over Roo/GitHub MCP-specific tool names.
+
 ## Future Roadmap
 
 1.  Implement the automated LaTeX compilation pipeline using GitHub Actions for seamless CV updates.

@@ -1,3 +1,11 @@
+Agent Documentation Map
+-----------------------
+
+- `AGENTS.md`          - Repository-wide OpenCode agent guidance.
+- `CV/AGENTS.md`       - Resume/CV-specific OpenCode guidance for files inside `CV/`.
+
+Note: Legacy Roo configuration files are no longer used in this repository.
+
 Directory Structure
 -------------------
 css\              - Stylesheets CSS files for the template.
